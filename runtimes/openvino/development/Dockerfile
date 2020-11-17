@@ -25,6 +25,7 @@ ENV ONNX_BACKEND="test_onnx.utils.onnx_backend"
 ARG OV_DIST_DIR=/openvino/dist
 
 RUN apt-get install -y --no-install-recommends \
+    autoconf \
     automake \
     libtool \
     build-essential \
