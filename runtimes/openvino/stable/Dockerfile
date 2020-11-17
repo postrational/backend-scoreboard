@@ -24,7 +24,14 @@ ENV ONNX_BACKEND="test_onnx.utils.onnx_backend"
 
 ARG OV_DIST_DIR=/openvino/dist
 
-RUN apt-get install -y --no-install-recommends build-essential cmake curl cython3 git wget && \
+RUN apt-get install -y --no-install-recommends \
+    autoconf \
+    build-essential \
+    cmake \
+    curl \
+    cython3 \
+    git \
+    wget && \
     apt-get clean autoclean && apt-get autoremove -y
 
 # Obtain OpenVINO release info
