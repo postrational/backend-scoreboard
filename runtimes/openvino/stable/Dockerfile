@@ -26,6 +26,7 @@ ARG OV_DIST_DIR=/openvino/dist
 
 RUN apt-get install -y --no-install-recommends \
     autoconf \
+    automake \
     libtool \
     build-essential \
     cmake \
@@ -79,7 +80,7 @@ RUN sed -i "s/^typing$/typing; python_version < '3.6'/g" requirements.txt
 RUN sed -i 's/BACKEND_NAME = None/BACKEND_NAME = "CPU"/' /openvino/ngraph/python/tests/__init__.py
 RUN sed -i 's/cls.backend_name/"CPU"/' /openvino/ngraph/python/tests/test_onnx/utils/onnx_backend.py
 # End of hack
-RUN git clone --branch v2.5.0 --depth 1 https://github.com/pybind/pybind11.git
+RUN git clone --branch v2.6.1 --depth 1 https://github.com/pybind/pybind11.git
 ENV NGRAPH_CPP_BUILD_PATH=${OV_DIST_DIR}
 ENV LD_LIBRARY_PATH=${OV_DIST_DIR}/lib:${LD_LIBRARY_PATH}
 ENV PYTHONPATH=/openvino/bin/intel64/Release/lib/python_api/python3.8:/openvino/ngraph/python/tests:${PYTHONPATH}
