@@ -26,6 +26,7 @@ ARG OV_DIST_DIR=/openvino/dist
 
 RUN apt-get install -y --no-install-recommends \
     autoconf \
+    libtool \
     build-essential \
     cmake \
     curl \
