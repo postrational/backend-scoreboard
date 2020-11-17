@@ -17,6 +17,12 @@
             "results_dir": "./results/onnx-tf/stable",
             "core_packages": ["tensorflow", "onnx-tf"],
             "dockerfile_link": "runtimes/onnx-tf/stable/Dockerfile"
+        },
+        "openvino": {
+            "name": "OpenVINO",
+            "results_dir": "./results/openvino/stable",
+            "core_packages": ["ngraph-core"],
+            "dockerfile_link": "runtimes/openvino/stable/Dockerfile"
         }
     },
     "development": {
@@ -31,6 +37,11 @@
             "results_dir": "./results/onnx-runtime/development",
             "core_packages": ["ort-nightly"],
             "dockerfile_link": "runtimes/onnx-runtime/development/Dockerfile"
+        },
+        "openvino": {
+            "name": "OpenVINO",
+            "results_dir": "./results/openvino/development",
+            "dockerfile_link": "runtimes/openvino/development/Dockerfile"
         }
     },
     "deploy_paths": {
