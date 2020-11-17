@@ -1,0 +1,18 @@
+[
+    {
+        "date": "11/17/2020 20:33:35",
+        "failed": 349,
+        "passed": 546,
+        "skipped": 0,
+        "versions": [
+            {
+                "name": "ngraph-core",
+                "version": "0.0.0.dev0"
+            },
+            {
+                "name": "onnx",
+                "version": "1.7.0"
+            }
+        ]
+    }
+]
