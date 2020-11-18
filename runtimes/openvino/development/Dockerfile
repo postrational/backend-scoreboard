@@ -71,7 +71,7 @@ ENV NGRAPH_CPP_BUILD_PATH=${OV_DIST_DIR}
 ENV LD_LIBRARY_PATH=${OV_DIST_DIR}/lib:${LD_LIBRARY_PATH}
 ENV PYTHONPATH=/openvino/bin/intel64/Release/lib/python_api/python3.8:/openvino/ngraph/python/tests:${PYTHONPATH}
 RUN pip3 install -r requirements.txt
-RUN pip3 install -r requirements_test.txt
+RUN pip3 install onnx
 RUN python3 setup.py bdist_wheel
 RUN pip3 install --no-index --pre --find-links=dist/ ngraph-core
 ####################################################
