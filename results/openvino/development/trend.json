@@ -14,5 +14,21 @@
                 "version": "1.7.0"
             }
         ]
+    },
+    {
+        "date": "11/18/2020 00:58:59",
+        "failed": 350,
+        "passed": 545,
+        "skipped": 0,
+        "versions": [
+            {
+                "name": "ngraph-core",
+                "version": "0.0.0.dev0"
+            },
+            {
+                "name": "onnx",
+                "version": "1.7.0"
+            }
+        ]
     }
 ]
