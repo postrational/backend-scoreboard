@@ -68,6 +68,7 @@ RUN sed -i 's/cls.backend_name/"CPU"/' /openvino/ngraph/python/tests/test_onnx/u
 # End of hack
 RUN git clone --branch v2.6.1 --depth 1 https://github.com/pybind/pybind11.git
 ENV NGRAPH_CPP_BUILD_PATH=${OV_DIST_DIR}/deployment_tools/ngraph
+ENV ngraph_DIR=${NGRAPH_CPP_BUILD_PATH}
 ENV LD_LIBRARY_PATH=${OV_DIST_DIR}/deployment_tools/ngraph/lib:${LD_LIBRARY_PATH}
 ENV PYTHONPATH=/openvino/bin/intel64/Release/lib/python_api/python3.8:/openvino/ngraph/python/tests:${PYTHONPATH}
 RUN pip3 install -r requirements.txt
