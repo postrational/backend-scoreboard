@@ -7,7 +7,9 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get install -y \
     python3 \
     python3-dev \
-    python3-pip && \
+    python3-pip \
+    protobuf-compiler \
+    libprotoc-dev && \
     apt-get clean autoclean && apt-get autoremove -y
 
 RUN pip3 install --upgrade pip setuptools wheel
@@ -85,7 +87,14 @@ ENV NGRAPH_CPP_BUILD_PATH=${OV_DIST_DIR}
 ENV LD_LIBRARY_PATH=${OV_DIST_DIR}/lib:${LD_LIBRARY_PATH}
 ENV PYTHONPATH=/openvino/bin/intel64/Release/lib/python_api/python3.8:/openvino/ngraph/python/tests:${PYTHONPATH}
 RUN pip3 install -r requirements.txt
-RUN pip3 install onnx
+# Temporarily build ONNX from source due to bug fixed in PR #3256 in onnx/onnx
+# After ONNX>1.8.1 is released, revert https://github.com/postrational/backend-scoreboard/pull/6
+RUN mkdir /root/app && \
+    cd /root/app && \
+    git clone https://github.com/onnx/onnx.git && \
+    cd onnx && \
+    git submodule update --init --recursive && \
+    python3 setup.py install
 RUN export NGRAPH_VERSION=`cat /openvino.latest/tag` && python3 setup.py bdist_wheel
 RUN pip3 install --no-index --pre --find-links=dist/ ngraph-core
 ####################################################
