@@ -12,19 +12,20 @@
     const allBackendsResults = table.getElementsByClassName('backendResults');
     const showPassed = document.getElementById('showPassed' + tableType).checked;
     const showFailed = document.getElementById('showFailed' + tableType).checked;
-    let testStatus = ''
+    let testStatus = '';
 
     if (showPassed && !showFailed) {
-      testStatus = 'Passed';
+      testStatus = 'passed';
     }
     else if (showFailed && !showPassed) {
-      testStatus = "Failed"
+      testStatus = "failed";
     }
     for (let i = 0; i < testNames.length; i++) {
       const testNameText = testNames[i].textContent || testNames[i].innerText;
       for (let j = 0; j < allBackendsResults.length; j++) {
         const backendResults = allBackendsResults[j].getElementsByClassName('testResult');
-        if (testNameText.toLowerCase().indexOf(filter) < 0 || (testStatus !== '' && backendResults[i].textContent.trim() !== testStatus)) {
+        const testResult = backendResults[i].textContent.trim().toLowerCase();
+        if (testNameText.toLowerCase().indexOf(filter) < 0 || (testStatus &&  testResult !== testStatus)) {
           testNames[i].style.display = 'none';
           backendResults[i].style.display = 'none';
         } else {
