@@ -11,9 +11,15 @@
 <div class="tab-content" id="tables-tabs">
     <div class="tab-pane fade show active"  id="unittests" role="tabpanel" aria-labelledby="unittests-tab">
         <div class="row justify-content-center">
-            <div class="col-auto">
+            <div class="col-auto search-filter">
                 <h2>Backend unit tests list</h2>
                 <input type="text" id="testNameInput" class="search" onkeyup="onSearch('testNameInput', 'unitTestsTable')" placeholder="Search for test name...">
+                <div>
+                    <input type="checkbox" id="showPassed" name="showPassed" value="showPassed" onclick="onSearch('testNameInput', 'unitTestsTable')">
+                    <label for="showPassed"> Passed </label>
+                    <input type="checkbox" id="showFailed" name="showFailed" value="showFailed" onclick="onSearch('testNameInput', 'unitTestsTable')">
+                    <label for="showFailed"> Failed </label>
+                </div>
             </div>
         </div>
         <div class="row justify-content-center">

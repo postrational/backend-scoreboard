@@ -82,6 +82,12 @@ hr {
     overflow: auto;
 }
 
+.search-filter {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
 .nav-tabs .nav-item .nav-link {
     border-bottom: 0px;
     background-color: transparent;
