@@ -176,22 +176,6 @@
         ]
     },
     {
-        "date": "12/24/2020 00:51:37",
-        "failed": 0,
-        "passed": 0,
-        "skipped": 0,
-        "versions": [
-            {
-                "name": "ngraph-core",
-                "version": "0.0.0.dev0"
-            },
-            {
-                "name": "onnx",
-                "version": "1.8.0"
-            }
-        ]
-    },
-    {
         "date": "01/16/2021 00:50:37",
         "failed": 396,
         "passed": 526,
@@ -339,6 +323,22 @@
         "date": "02/15/2021 01:13:04",
         "failed": 371,
         "passed": 551,
+        "skipped": 0,
+        "versions": [
+            {
+                "name": "ngraph-core",
+                "version": "0.0.0.dev0"
+            },
+            {
+                "name": "onnx",
+                "version": "1.8.1"
+            }
+        ]
+    },
+    {
+        "date": "02/16/2021 01:00:50",
+        "failed": 364,
+        "passed": 564,
         "skipped": 0,
         "versions": [
             {
