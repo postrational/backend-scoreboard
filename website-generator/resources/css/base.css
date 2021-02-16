@@ -69,6 +69,12 @@ hr {
     min-width: 15vw;
 }
 
+.search-filter {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
 .score-headers {
     text-align: center;
 }
@@ -80,12 +86,6 @@ hr {
     align-items: center;
     justify-content: center;
     overflow: auto;
-}
-
-.search-filter {
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
 }
 
 .nav-tabs .nav-item .nav-link {
