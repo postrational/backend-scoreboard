@@ -14,7 +14,7 @@
             <div class="col-auto search-filter">
                 <h2>Backend unit tests list</h2>
                 <input type="text" id="testNameInput" class="search"
-                    onkeyup="onSearch('testNameInput', 'unitTestsTable')" placeholder="Search for test name...">
+                    onkeyup="onSearch('testNameInput', 'unitTestsTable', 'Tests')" placeholder="Search for test name...">
                 <div>
                     <input type="checkbox" id="showPassedTests" name="showPassed" value="showPassed"
                         onclick="onSearch('testNameInput', 'unitTestsTable', 'Tests')">
@@ -37,7 +37,7 @@
                 <div class="col-auto search-filter">
                     <h2>Operators coverage</h2>
                     <input type="text" id="opNameInput" class="search"
-                        onkeyup="onSearch('opNameInput', 'operatorsTable')" placeholder="Search for operator name...">
+                        onkeyup="onSearch('opNameInput', 'operatorsTable', 'Ops')" placeholder="Search for operator name...">
                     <div>
                         <input type="checkbox" id="showPassedOps" name="showPassed" value="showPassed"
                             onclick="onSearch('opNameInput', 'operatorsTable', 'Ops')">
