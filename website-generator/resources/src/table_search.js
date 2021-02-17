@@ -18,7 +18,7 @@
       testStatus = 'passed';
     }
     else if (showFailed && !showPassed) {
-      testStatus = "failed";
+      testStatus = 'failed';
     }
     for (let i = 0; i < testNames.length; i++) {
       const testNameText = testNames[i].textContent || testNames[i].innerText;
