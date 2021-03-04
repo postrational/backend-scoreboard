@@ -638,5 +638,21 @@
                 "version": "1.8.1"
             }
         ]
+    },
+    {
+        "date": "03/04/2021 11:58:21",
+        "failed": 401,
+        "passed": 521,
+        "skipped": 0,
+        "versions": [
+            {
+                "name": "ngraph-core",
+                "version": "2021.2"
+            },
+            {
+                "name": "onnx",
+                "version": "1.8.1"
+            }
+        ]
     }
 ]
