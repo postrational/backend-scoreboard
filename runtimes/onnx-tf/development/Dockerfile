@@ -1,8 +1,5 @@
 FROM ubuntu:18.04
 
-ENV http_proxy http://proxy-chain.intel.com:911
-ENV https_proxy http://proxy-chain.intel.com:912
-
 # Disable interactive installation mode
 ENV DEBIAN_FRONTEND=noninteractive
 
