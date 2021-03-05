@@ -1,0 +1,11 @@
+Model,None,None
+bvlc_alexnet,3/8 nodes covered: Failed!,3/8 nodes covered: Failed!
+densenet121,5/10 nodes covered: Failed!,5/10 nodes covered: Failed!
+inception_v1,3/10 nodes covered: Failed!,3/10 nodes covered: Failed!
+inception_v2,6/12 nodes covered: Failed!,6/12 nodes covered: Failed!
+resnet50,3/9 nodes covered: Failed!,3/9 nodes covered: Failed!
+shufflenet,3/11 nodes covered: Failed!,3/11 nodes covered: Failed!
+squeezenet_old,3/7 nodes covered: Failed!,3/7 nodes covered: Failed!
+vgg19,3/7 nodes covered: Failed!,3/7 nodes covered: Failed!
+zfnet512,2/7 nodes covered: Failed!,2/7 nodes covered: Failed!
+Summary,0/9 model tests passed,0/9 model tests passed

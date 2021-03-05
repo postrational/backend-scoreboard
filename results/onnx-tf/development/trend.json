@@ -1,0 +1,42 @@
+[
+    {
+        "date": "03/04/2021 16:17:48",
+        "failed": 647,
+        "passed": 275,
+        "skipped": 0,
+        "versions": [
+            {
+                "name": "onnx",
+                "version": "1.8.1"
+            },
+            {
+                "name": "onnx-tf",
+                "version": "1.7.0"
+            },
+            {
+                "name": "tensorflow",
+                "version": "2.4.1"
+            }
+        ]
+    },
+    {
+        "date": "03/05/2021 08:15:49",
+        "failed": 647,
+        "passed": 275,
+        "skipped": 0,
+        "versions": [
+            {
+                "name": "onnx",
+                "version": "1.8.1"
+            },
+            {
+                "name": "onnx-tf",
+                "version": "1.7.0"
+            },
+            {
+                "name": "tensorflow",
+                "version": "2.4.1"
+            }
+        ]
+    }
+]
