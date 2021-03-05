@@ -30,6 +30,12 @@
             "name": "OpenVINO",
             "results_dir": "./results/openvino/development",
             "dockerfile_link": "runtimes/openvino/development/Dockerfile"
+        },
+        "onnx-tf": {
+            "name": "ONNX-TF",
+            "results_dir": "./results/onnx-tf/development",
+            "core_packages": ["tensorflow"],
+            "dockerfile_link": "runtimes/onnx-tf/development/Dockerfile"
         }
     },
     "deploy_paths": {
