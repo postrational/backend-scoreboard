@@ -29,7 +29,7 @@
         "onnx-tf": {
             "name": "ONNX-TF",
             "results_dir": "./results/onnx-tf/development",
-            "core_packages": ["tensorflow", "onnx-tf"],
+            "core_packages": ["tensorflow"],
             "dockerfile_link": "runtimes/onnx-tf/development/Dockerfile"
         },
         "openvino": {
