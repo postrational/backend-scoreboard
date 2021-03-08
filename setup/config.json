@@ -28,7 +28,10 @@
         "pytorch-caffe2": {
             "name": "PyTorch-Caffe2",
             "results_dir": "./results/pytorch-caffe2/stable",
-            "core_packages": ["pytorch", "caffe2"],
+            "core_packages": [
+                "pytorch",
+                "caffe2"
+            ],
             "dockerfile_link": "runtimes/pytorch-caffe2/stable/Dockerfile"
         }
     },
@@ -44,6 +47,7 @@
         "openvino": {
             "name": "OpenVINO",
             "results_dir": "./results/openvino/development",
+            "core_packages": [],
             "dockerfile_link": "runtimes/openvino/development/Dockerfile"
         },
         "onnx-tf": {
