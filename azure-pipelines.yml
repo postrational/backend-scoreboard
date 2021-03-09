@@ -92,7 +92,7 @@ jobs:
       displayName: 'Deploy results'
 
 
-    - job: pytorch-caffe2_stable
+  - job: pytorch-caffe2_stable
     timeoutInMinutes: 90
     steps:
     - checkout: self
