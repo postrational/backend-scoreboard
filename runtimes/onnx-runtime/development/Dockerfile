@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 
 # Disable interactive installation mode
 ENV DEBIAN_FRONTEND=noninteractive
@@ -31,7 +31,7 @@ RUN pip3 install onnx
 # Temporarily build ONNX with patch due to bug fixed in PR #3256 in onnx/onnx
 # After ONNX>1.8.1 is released, remove the following `sed` command:
 RUN sed -i 's/defs.get_schema(self.op_type)/defs.get_schema(self.op_type, node.domain)/' \
-    /usr/local/lib/python3.6/dist-packages/onnx/backend/test/report/coverage.py
+    /usr/local/lib/python3.8/dist-packages/onnx/backend/test/report/coverage.py
 
 # Install dependencies
 RUN pip3 install -i https://test.pypi.org/simple/ ort-nightly
