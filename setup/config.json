@@ -29,8 +29,7 @@
             "name": "PyTorch-Caffe2",
             "results_dir": "./results/pytorch-caffe2/stable",
             "core_packages": [
-                "pytorch",
-                "caffe2"
+                "torch"
             ],
             "dockerfile_link": "runtimes/pytorch-caffe2/stable/Dockerfile"
         }
@@ -61,7 +60,9 @@
         "pytorch-caffe2": {
             "name": "PyTorch-Caffe2",
             "results_dir": "./results/pytorch-caffe2/development",
-            "core_packages": [],
+            "core_packages": [
+                "torch"
+            ],
             "dockerfile_link": "runtimes/pytorch-caffe2/development/Dockerfile"
         }
     },
