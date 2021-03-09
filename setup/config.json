@@ -26,6 +26,12 @@
             "core_packages": ["ort-nightly"],
             "dockerfile_link": "runtimes/onnx-runtime/development/Dockerfile"
         },
+        "onnx-tf": {
+            "name": "ONNX-TF",
+            "results_dir": "./results/onnx-tf/development",
+            "core_packages": ["tensorflow"],
+            "dockerfile_link": "runtimes/onnx-tf/development/Dockerfile"
+        },
         "openvino": {
             "name": "OpenVINO",
             "results_dir": "./results/openvino/development",
