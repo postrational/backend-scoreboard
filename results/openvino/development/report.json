@@ -1,5 +1,5 @@
 {
-    "date": "11/21/2021 01:06:04",
+    "date": "11/22/2021 01:08:08",
     "failed": [
         "OnnxBackendNodeModelTest::test_adagrad_cpu",
         "OnnxBackendNodeModelTest::test_adagrad_multiple_cpu",
@@ -72,9 +72,6 @@
         "OnnxBackendNodeModelTest::test_mul_uint8_cpu",
         "OnnxBackendNodeModelTest::test_nesterov_momentum_cpu",
         "OnnxBackendNodeModelTest::test_onehot_negative_indices_cpu",
-        "OnnxBackendNodeModelTest::test_onehot_with_axis_cpu",
-        "OnnxBackendNodeModelTest::test_onehot_with_negative_axis_cpu",
-        "OnnxBackendNodeModelTest::test_onehot_without_axis_cpu",
         "OnnxBackendNodeModelTest::test_optional_get_element_cpu",
         "OnnxBackendNodeModelTest::test_optional_get_element_sequence_cpu",
         "OnnxBackendNodeModelTest::test_optional_has_element_cpu",
@@ -572,6 +569,9 @@
         "OnnxBackendNodeModelTest::test_not_2d_cpu",
         "OnnxBackendNodeModelTest::test_not_3d_cpu",
         "OnnxBackendNodeModelTest::test_not_4d_cpu",
+        "OnnxBackendNodeModelTest::test_onehot_with_axis_cpu",
+        "OnnxBackendNodeModelTest::test_onehot_with_negative_axis_cpu",
+        "OnnxBackendNodeModelTest::test_onehot_without_axis_cpu",
         "OnnxBackendNodeModelTest::test_or2d_cpu",
         "OnnxBackendNodeModelTest::test_or3d_cpu",
         "OnnxBackendNodeModelTest::test_or4d_cpu",
