@@ -4078,5 +4078,21 @@
                 "version": "1.11.0a0+gitd176c82"
             }
         ]
+    },
+    {
+        "date": "11/24/2021 02:46:29",
+        "failed": 0,
+        "passed": 0,
+        "skipped": 0,
+        "versions": [
+            {
+                "name": "onnx",
+                "version": "1.10.2"
+            },
+            {
+                "name": "torch",
+                "version": "1.11.0a0+git79b67d9"
+            }
+        ]
     }
 ]
