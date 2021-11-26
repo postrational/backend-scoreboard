@@ -1,5 +1,5 @@
 {
-    "date": "11/25/2021 01:16:26",
+    "date": "11/26/2021 01:17:38",
     "failed": [
         "OnnxBackendNodeModelTest::test_adagrad_cpu",
         "OnnxBackendNodeModelTest::test_adagrad_multiple_cpu",
@@ -121,7 +121,6 @@
         "OnnxBackendNodeModelTest::test_tfidfvectorizer_tf_onlybigrams_skip5_cpu",
         "OnnxBackendNodeModelTest::test_tfidfvectorizer_tf_uniandbigrams_skip5_cpu",
         "OnnxBackendNodeModelTest::test_tile_cpu",
-        "OnnxBackendNodeModelTest::test_tile_precomputed_cpu",
         "OnnxBackendNodeModelTest::test_training_dropout_cpu",
         "OnnxBackendNodeModelTest::test_training_dropout_default_cpu",
         "OnnxBackendNodeModelTest::test_training_dropout_default_mask_cpu",
@@ -848,6 +847,7 @@
         "OnnxBackendNodeModelTest::test_thresholdedrelu_cpu",
         "OnnxBackendNodeModelTest::test_thresholdedrelu_default_cpu",
         "OnnxBackendNodeModelTest::test_thresholdedrelu_example_cpu",
+        "OnnxBackendNodeModelTest::test_tile_precomputed_cpu",
         "OnnxBackendNodeModelTest::test_top_k_cpu",
         "OnnxBackendNodeModelTest::test_top_k_negative_axis_cpu",
         "OnnxBackendNodeModelTest::test_top_k_smallest_cpu",
