@@ -4462,5 +4462,17 @@
                 "version": "1.11.0a0+gitef70174"
             }
         ]
+    },
+    {
+        "date": "12/21/2021 02:48:09",
+        "failed": 0,
+        "passed": 0,
+        "skipped": 0,
+        "versions": [
+            {
+                "name": "onnx",
+                "version": "1.10.2"
+            }
+        ]
     }
 ]
