@@ -4474,5 +4474,17 @@
                 "version": "1.10.2"
             }
         ]
+    },
+    {
+        "date": "02/18/2022 02:27:31",
+        "failed": 0,
+        "passed": 0,
+        "skipped": 0,
+        "versions": [
+            {
+                "name": "onnx",
+                "version": "1.11.0"
+            }
+        ]
     }
 ]
