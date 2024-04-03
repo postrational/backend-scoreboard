@@ -1,0 +1,23 @@
+name: Run benchmarks
+
+on: pull_request
+
+jobs:
+  onnxruntime_stable:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Build docker image
+        run: docker build -t scoreboard/onnx -f runtimes/onnx-runtime/stable/Dockerfile .
+
+#       - name: Git setup
+#         run: . setup/git-setup.sh
+
+      - name: Run docker container
+        run: docker run --name onnx-runtime --env-file setup/env.list -v ${{ github.workspace }}/results/onnx-runtime/stable:/root/results scoreboard/onnx || true
+
+#       - name: Deploy results
+#         run: . setup/git-deploy-results.sh
