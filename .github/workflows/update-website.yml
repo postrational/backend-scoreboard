@@ -34,5 +34,5 @@ jobs:
       - name: Generate website
         run: python3 website-generator/generator.py --config ./setup/config.json
 
-#       - name: Deploy website
-#         run: . setup/git-deploy-website.sh
+      - name: Deploy website
+        run: . setup/git-deploy-website.sh
