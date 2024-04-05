@@ -22,8 +22,8 @@ jobs:
           pip install --upgrade pip
           pip install --upgrade -r requirements_web.txt
 
-#       - name: Git setup
-#         run: . setup/git-setup.sh
+      - name: Git setup
+        run: . setup/git-setup.sh
 
       - name: Generate website
         run: python3 website-generator/generator.py --config ./setup/config.json
