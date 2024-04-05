@@ -7,9 +7,9 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
-          persist-credentials: true
+          persist-credentials: false
           clean: true
 
       - name: Set up Python 3.11
