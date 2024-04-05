@@ -13,11 +13,11 @@ jobs:
       - name: Build docker image
         run: docker build -t scoreboard/onnx -f runtimes/onnx-runtime/stable/Dockerfile .
 
-#       - name: Git setup
-#         run: . setup/git-setup.sh
+      - name: Git setup
+        run: . setup/git-setup.sh
 
       - name: Run docker container
         run: docker run --name onnx-runtime --env-file setup/env.list -v ${{ github.workspace }}/results/onnx-runtime/stable:/root/results scoreboard/onnx || true
 
-#       - name: Deploy results
-#         run: . setup/git-deploy-results.sh
+      - name: Deploy results
+        run: . setup/git-deploy-results.sh
