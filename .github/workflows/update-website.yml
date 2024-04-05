@@ -1,0 +1,32 @@
+name: Website Update
+
+on: pull_request
+
+jobs:
+  generate_website:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: true
+          clean: true
+
+      - name: Set up Python 3.6
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.6'
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install --upgrade -r requirements_web.txt
+
+#       - name: Git setup
+#         run: . setup/git-setup.sh
+
+      - name: Generate website
+        run: python3 website-generator/generator.py --config ./setup/config.json
+
+#       - name: Deploy website
+#         run: . setup/git-deploy-website.sh
