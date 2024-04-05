@@ -11,7 +11,6 @@ git remote set-url origin git@github.com:postrational/backend-scoreboard.git
 
 git config --global user.email "onnx_scoreboard_bot@azure"
 git config --global user.name "ONNX Scoreboard Bot @ Azure Pipelines"
-git config pull.rebase true
 
-git pull origin master
+git fetch origin master
 git checkout master
