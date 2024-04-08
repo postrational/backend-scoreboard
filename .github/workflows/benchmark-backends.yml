@@ -3,6 +3,9 @@ name: Run benchmarks
 on:
   schedule:
     - cron: '0 0 * * *'
+  pull_request:
+    branches:
+      - master
 
 jobs:
   onnxruntime_stable:
@@ -26,6 +29,31 @@ jobs:
 
       - name: Run docker container
         run: docker run --name onnx-runtime --env-file setup/env.list -v ${{ github.workspace }}/results/onnx-runtime/stable:/root/results scoreboard/onnx || true
+
+      - name: Deploy results
+        run: . setup/git-deploy-results.sh
+
+
+  onnx_tf_stable:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Build docker image
+        run: docker build -t scoreboard/onnxtf -f runtimes/onnx-tf/stable/Dockerfile .
+
+      - name: Set up SSH
+        uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: ${{ secrets.DEPLOY_KEY }}
+
+      - name: Git setup
+        run: . setup/git-setup.sh
+
+      - name: Run docker container
+        run: docker run --name onnxtf --env-file setup/env.list -v ${{ github.workspace }}/results/onnx-tf/stable:/root/results scoreboard/onnxtf || true
 
       - name: Deploy results
         run: . setup/git-deploy-results.sh
