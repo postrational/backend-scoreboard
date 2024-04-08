@@ -54,13 +54,13 @@ For `development` version the `core_packages` list is optional:
 * Edit [benchmark-backends.yml](.github/workflows/benchmark-backends.yml) file.
 * Copy and paste this [job template](examples/job.yml) to the end of file.
 * Fill `new_backend` with the new backend unique name.
-* Change the `docker build` and `docker run` commands to match your backend. 
+* Change the `docker build` and `docker run` commands to match your backend.
 
 ```yml
 
  jobs:
   ... # other jobs
-  
+
   new_backend:
     runs-on: ubuntu-latest
     timeout-minutes: 90
