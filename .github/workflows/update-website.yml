@@ -1,6 +1,16 @@
 name: Website Update
 
-on: pull_request
+on:
+  schedule:
+    - cron: '0 6 * * *'
+  # Disable push triggers
+  push:
+    branches-ignore:
+      - '*'
+  # Disable pull request triggers
+  pull_request:
+    branches-ignore:
+      - '*'
 
 jobs:
   generate_website:
