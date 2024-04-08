@@ -3,14 +3,6 @@ name: Run benchmarks
 on:
   schedule:
     - cron: '0 0 * * *'
-  # Disable push triggers
-  push:
-    branches-ignore:
-      - '*'
-  # Disable pull request triggers
-  pull_request:
-    branches-ignore:
-      - '*'
 
 jobs:
   onnxruntime_stable:

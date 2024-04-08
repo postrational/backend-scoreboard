@@ -3,14 +3,6 @@ name: Website Update
 on:
   schedule:
     - cron: '0 6 * * *'
-  # Disable push triggers
-  push:
-    branches-ignore:
-      - '*'
-  # Disable pull request triggers
-  pull_request:
-    branches-ignore:
-      - '*'
 
 jobs:
   generate_website:
