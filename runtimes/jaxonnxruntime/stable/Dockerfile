@@ -1,17 +1,15 @@
-FROM ubuntu:20.04
+FROM python:3.9
 
 # Disable interactive installation mode
 ENV DEBIAN_FRONTEND=noninteractive
 
-# Install Python and locales dependencies
+# Install Python dependencies
 RUN apt-get update && apt-get install -y \
-	python3 \	
-    python3-dev \	
-    python3-pip \
-    locales && \
+    python3 \
+    python3-dev \
+    python3-pip && \
     apt-get clean autoclean && apt-get autoremove -y
 
-RUN pip3 install --upgrade pip setuptools wheel
 
 # Copy local directories
 COPY ./test /root/test
@@ -21,18 +19,15 @@ COPY ./setup /root/setup
 RUN pip3 install --no-cache-dir -r /root/setup/requirements_report.txt
 
 ############## ONNX Backend dependencies ###########
-ENV ONNX_BACKEND="onnxruntime.backend.backend"
-
-# Set locale which is required for StringNormalizer
-RUN locale-gen en_US.UTF-8 && update-locale LANG=en_US.UTF-8
+ENV ONNX_BACKEND="jaxonnxruntime.backend"
 
 # Install dependencies
-RUN pip3 install \
+RUN pip3 install --no-cache-dir \
     onnx \
-    onnxruntime \
-    protobuf==3.20.2 \
-    numpy==1.22.4
+    jaxonnxruntime
+
 ####################################################
+RUN pip3 install --upgrade pip setuptools wheel pytest
 
 CMD . /root/setup/docker-setup.sh && \
     pytest /root/test/test_backend.py --onnx_backend=${ONNX_BACKEND} -k 'not _cuda' -v
