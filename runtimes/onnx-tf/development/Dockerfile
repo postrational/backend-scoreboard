@@ -27,8 +27,9 @@ RUN pip3 install onnx
 
 # Install dependencies
 RUN pip3 install --no-cache-dir \
-    tensorflow
-RUN pip3 install git+https://github.com/onnx/onnx-tensorflow.git@master
+    tensorflow \
+    tensorflow-probability
+RUN pip3 install git+https://github.com/onnx/onnx-tensorflow.git@main
 ####################################################
 
 CMD . /root/setup/docker-setup.sh && \

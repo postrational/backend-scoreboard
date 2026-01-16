@@ -22,11 +22,11 @@ RUN pip3 install --no-cache-dir -r /root/setup/requirements_report.txt
 ############## ONNX Backend dependencies ###########
 ENV ONNX_BACKEND="onnx_tf.backend"
 
-RUN pip3 install onnx
-
 # Install dependencies
 RUN pip3 install --no-cache-dir \
+    onnx \
     tensorflow \
+    tensorflow-probability \
     onnx-tf
 ####################################################
 
